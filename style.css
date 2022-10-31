@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    color: white;
+    height: 1980px;
+}
+
+.imghead {
+    background: linear-gradient(rgba(0,0,0,0.8) 30%,rgba(0, 0, 0, 0.3)), url(bts.jfif);
+    background-position: center;
+    /* border: solid 2px navajowhite; */
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    /* border: solid 2px aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.banner h1 {
+    /* border: solid 3px lawngreen; */
+    margin-bottom: 12%;
+    font-family: 'Philosopher';
+    font-size: 80px;
+    text-shadow: 0px 0px 5px white;
+}
+
+.header {
+    /* border: solid 2px orange; */
+}
+
+.header .container {
+    /* border: solid 2px purple; */
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.titulo {
+    margin-left: 2%;
+}
+
+.header .container span {
+    font-family: 'Zilla Slab';
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header .container .red {
+    color: red;
+}
+
+.header .container .blue {
+    color: blue;
+}
+
+.header .container .white {
+    color: white;
+}
+
+.header .container .yellow {
+    color: yellow;
+}
+
+.header ul {
+    /* border: solid 2px darkblue; */
+    font-family: 'Zilla Slab';
+    font-weight: 600;
+    font-size: 19px;
+    width: 47%;
+    color: white;
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    height: fit-content;
+}
+
+.header li {
+    display: inline-block;
+    margin: 0;
+}
+
+.header li:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px white;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.header li:hover:after {
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
+}
