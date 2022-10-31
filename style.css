@@ -1,7 +1,8 @@
 body {
     margin: 0;
     color: white;
-    height: 1980px;
+    height: 100vh;
+    width: 100vw;
 }
 
 .imghead {
@@ -14,19 +15,29 @@ body {
 }
 
 .banner {
-    /* border: solid 2px aqua; */
+    border: solid 2px aqua;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
 }
 
 .banner h1 {
-    /* border: solid 3px lawngreen; */
-    margin-bottom: 12%;
+    border: solid 3px lawngreen;
+    margin-block-start: 5%;
+    margin-block-end: 0;
+    /* margin-bottom: 12%; */
     font-family: 'Philosopher';
     font-size: 80px;
     text-shadow: 0px 0px 5px white;
+}
+
+.banner h4 {
+    font-family: 'Philosopher';
+    font-size: 20px;
+    border: solid 2px aqua;
+    align-self: center;
 }
 
 .header {
@@ -97,4 +108,20 @@ body {
 .header li:hover:after {
     transform: scaleX(1);
     transform-origin: 0% 50%;
+}
+
+.artistas {
+    height: 520px;
+    width: 935px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 60%);
+}
+
+.navigation label{
+    position: absolute;
+    
+    border: solid 2px orange;
 }
