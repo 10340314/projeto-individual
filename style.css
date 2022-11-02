@@ -15,7 +15,7 @@ body {
 }
 
 .banner {
-    border: solid 2px aqua;
+    /* border: solid 2px aqua; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +24,7 @@ body {
 }
 
 .banner h1 {
-    border: solid 3px lawngreen;
+    /* border: solid 3px lawngreen; */
     margin-block-start: 5%;
     margin-block-end: 0;
     /* margin-bottom: 12%; */
@@ -37,7 +37,7 @@ body {
 .banner h4 {
     font-family: 'Philosopher';
     font-size: 20px;
-    border: solid 2px aqua;
+    /* border: solid 2px aqua; */
     color: white;
     align-self: center;
 }
@@ -113,7 +113,7 @@ body {
 }
 
 .section2 {
-    border: solid 2px red;
+    /* border: solid 2px red; */
     display: flex;
     flex-direction: row;
 }
@@ -127,7 +127,7 @@ body {
 }
 
 .informacao h1 {
-    border: solid 2px purple;
+    /* border: solid 2px purple; */
     margin-block-start: 1%;
     margin-block-end: 0;
     font-size: 50px;
@@ -135,22 +135,51 @@ body {
 }
 
 .desc {
-    border: solid 2px navajowhite;
+    /* border: solid 2px navajowhite; */
     height: 67%;
     margin-bottom: 4%;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .informacao h5 {
-    font-size: 20px;
+    margin-block-start: 1%;
+    margin-block-end: 0;
+    font-size: 24px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
 }
 
 .informacao button {
     align-self: center;
+    border: 2px solid #1A1A1A;
+    background-color: transparent;
+    appearance: none;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #3B3B3B;
+    font-family: 'Zilla Slab';
+    font-size: 20px;
+    font-weight: 600;
+    width: 170px;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    outline: none;
 }
+
+.informacao button:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+
 
 .artistas {
     margin: 1% 0 1% 1%;
-    border: solid 2px orange;
+    /* border: solid 2px orange; */
     width: 900px;
     height: 506px;
     border-radius: 20px;
