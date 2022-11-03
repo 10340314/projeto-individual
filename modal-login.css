@@ -1,0 +1,195 @@
+.modal {
+    display: none;
+    position: fixed;
+    font-family: 'Philosopher';
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    /* display: flex; */
+    /* flex-direction: row; */
+    position: fixed;
+    left: 23%;
+    bottom: -35%;
+    border: solid 2px orange;
+    border-radius: 10px;
+    /* height: fit-content; */
+    background-color: #fff;
+    margin: 20% auto;
+    width: 54%;
+    height: 650px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalOpen;
+    animation-duration: 1s;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    /* padding: 10px 20px; */
+    justify-content: space-between;
+    height: 100%;
+}
+
+.modal-body img {
+    /* width: fit-content; */
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.tituloLogin h2 {
+    margin: 0;
+    font-size: 40px;
+}
+
+.tituloLogin {
+    /* border: solid 2px red; */
+    /* border-bottom: solid 2px gray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 0;
+    height: 60px;
+}
+
+.modal-formLogin span {
+    font-size: 24px;
+    /* text-align: center; */
+}
+
+.modal-formLogin input {
+    padding: 10px;
+    border-radius: 20px;
+    /* width: 60%; */
+    /* margin: 3% auto; */
+    font-family: 'Philosopher';
+    font-size: 20px;
+}
+
+.campos {
+    /* border: solid 2px orange; */
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+    margin: 4% auto 0 auto;
+}
+
+.campoEmail {
+    /* border: solid 2px black; */
+    display: flex;
+    flex-direction: column;
+    height: 36%;
+    justify-content: space-between;
+}
+
+.campoSenha {
+    /* border: solid 2px black; */
+    display: flex;
+    flex-direction: column;
+    height: 36%;
+    justify-content: space-between;
+}
+
+.forgPass {
+    /* border: solid 2px red; */
+    display: flex;
+    justify-content: right;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.forgPass span {
+    font-size: 18px;
+}
+
+.forgPass a {
+    color: #483d8b;
+}
+
+.forgPass a:hover {
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0 3px 0px; */
+    text-shadow: rgba(0, 0, 0, 0.4) 0 4px 19px;
+}
+
+.criarAcc {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 5% auto 0 auto;
+}
+
+.criarAcc span {
+    font-size: 16px;
+    border-bottom: solid #483d8b 1px;
+}
+
+.criarAcc a {
+    color: #483d8b;
+}
+
+.criarAcc a:hover {
+    text-shadow: rgba(0, 0, 0, 0.4) 0 4px 19px;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px; */
+}
+
+.modal-formLogin button {
+    width: 60%;
+    border-radius: 20px;
+    margin: 8% auto 0 auto;
+    font-family: 'Philosopher';
+    font-size: 20px;
+    border: 2px solid rgba(72, 61, 139);
+    background-color: transparent;
+    appearance: none;
+    padding: 8px;
+    background-color: transparent;
+    color: rgb(71, 61, 138);
+    font-weight: 600;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    outline: none;
+}
+
+.modal-formLogin button:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #1A1A1A;
+    border: 2px solid #000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.modal-formLogin {
+    /* border: solid 2px aquamarine; */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    margin: auto 0;
+}
+
+@keyframes modalOpen {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.close {
+    padding-right: 10px;
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+
+.close:hover,.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

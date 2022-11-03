@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal-login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -96,13 +97,25 @@
                     <img src="https://miro.medium.com/max/800/1*yo7GTx34uRd8OKuuEY4LJg.gif" alt="">
                     <div class="modal-formLogin">
                         <div class="tituloLogin">
-                            <h2>login</h2>
+                            <h2>Faça o seu login</h2>
                         </div>
-                        <span>E-mail:</span>
-                        <input type="text" id="ipt_senha">
-                        <span>Senha:</span>
-                        <input type="text" id="ipt_email">
+                        <div class="campos">
+                            <div class="campoEmail">
+                                <span>E-mail:</span>
+                                <input type="text" id="ipt_email">
+                            </div>
+                            <div class="campoSenha">
+                                <span>Senha:</span>
+                                <input type="text" id="ipt_senha">
+                            </div>
+                        </div>
+                        <div class="forgPass">
+                            <span><a href="">Esqueceu a senha?</a></span>
+                        </div>
                         <button class="button">Entrar</button>
+                        <div class="criarAcc">
+                            <span><a href="">Criar uma conta</a></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,7 +139,25 @@
         }
     }
 
+    var modal = document.getElementById('simpleModal')
+
+    var closeBtn = document.getElementsByClassName('close')[0]
+
+    closeBtn.addEventListener('click', closeModal)
+
+    window.addEventListener('click', outsideClick)
+    
     function openModal() {
         modal.style.display = 'block';
+    }
+
+    function closeModal() {
+        modal.style.display = 'none'
+    }
+
+    function outsideClick(e) {
+        if (e.target == modal) {
+            modal.style.display = 'none'
+        }
     }
 </script>
