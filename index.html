@@ -25,7 +25,7 @@
                         Home
                     </li>
                     <li>
-                        Artistas
+                        <a class="agora" href="#secao1">Artistas</a>
                     </li>
                     <li>
                         Gêneros
@@ -42,10 +42,11 @@
                 <h1>K-POP</h1>
                 <h4>Febre mundial</h4>
             </div>
+            <div class="degrade"></div>
         </div>
     </div>
     <div class="section2">
-        <div class="artistas">
+        <div class="artistas" id="secao1">
             <div class="slides">
                 <input type="radio" name="slide" id="slide1" checked>
                 <input type="radio" name="slide" id="slide2">
@@ -80,11 +81,36 @@
         <div class="informacao">
             <h1 class="grupo" id="h1_grupo">SOBRE BTS</h1>
             <div class="desc" id="div_desc">
-                <h5>BTS, acrônimo de Bangtan Sonyeondan ou “Beyond the Scene”, é um grupo sul-coreano indicado ao Grammy que conquistou os corações de milhões de fãs em todo o mundo desde sua estreia em junho de 2013.<br>
-                    Os membros do BTS são RM, Jin, SUGA, j-hope, Jimin, V e Jung Kook. Ganhando reconhecimento por suas músicas autênticas e autoproduzidas, performances de alto nível e a maneira como interagem com seus fãs, o BTS se estabeleceu como “Ícones Pop do século 21”, quebrando inúmeros recordes mundiais.</h5>
+                <h5>BTS, acrônimo de Bangtan Sonyeondan ou “Beyond the Scene”, é um grupo sul-coreano indicado ao Grammy
+                    que conquistou os corações de milhões de fãs em todo o mundo desde sua estreia em junho de 2013.<br>
+                    Os membros do BTS são RM, Jin, SUGA, j-hope, Jimin, V e Jung Kook. Ganhando reconhecimento por suas
+                    músicas autênticas e autoproduzidas, performances de alto nível e a maneira como interagem com seus
+                    fãs, o BTS se estabeleceu como “Ícones Pop do século 21”, quebrando inúmeros recordes mundiais.</h5>
             </div>
-            <button>Recomende-me uma música!</button>
+            <button onclick="verificarLogin()">Recomende-me uma música!</button>
         </div>
+        <div id="simpleModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-body">
+                    <img src="https://miro.medium.com/max/800/1*yo7GTx34uRd8OKuuEY4LJg.gif" alt="">
+                    <div class="modal-formLogin">
+                        <div class="tituloLogin">
+                            <h2>login</h2>
+                        </div>
+                        <span>E-mail:</span>
+                        <input type="text" id="ipt_senha">
+                        <span>Senha:</span>
+                        <input type="text" id="ipt_email">
+                        <button class="button">Entrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section3">
+        <div class="degrade2"></div>
+        <h1>TESTE</h1>
     </div>
 
 </body>
@@ -92,5 +118,15 @@
 </html>
 
 <script>
+    var login = false
 
+    function verificarLogin() {
+        if (login == false) {
+            openModal()
+        }
+    }
+
+    function openModal() {
+        modal.style.display = 'block';
+    }
 </script>
