@@ -1,0 +1,32 @@
+.camposCadastro {
+    border: solid 2px rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.modal-formCadastro {
+    border: solid 2px aquamarine;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    margin: auto 0;
+}
+
+.modal-formCadastro span {
+    font-size: 20px;
+}
+
+.closeCadastro {
+    padding-right: 10px;
+    color: #ccc;
+    float: left;
+    font-size: 30px;
+}
+
+.closeCadastro:hover,.closeCadastro:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

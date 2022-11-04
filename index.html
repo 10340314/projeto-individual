@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal-cadastro.css">
     <link rel="stylesheet" href="modal-login.css">
+    <link rel="stylesheet" href="modal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -92,19 +94,19 @@
         </div>
         <div id="modalLogin" class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="closeLogin">&times;</span>
                 <div class="modal-body">
                     <img src="https://miro.medium.com/max/800/1*yo7GTx34uRd8OKuuEY4LJg.gif" alt="">
                     <div class="modal-formLogin">
-                        <div class="tituloLogin">
+                        <div class="titulo">
                             <h2>Faça o seu login</h2>
                         </div>
-                        <div class="campos">
-                            <div class="campoEmail">
+                        <div class="camposLogin">
+                            <div class="campo">
                                 <span>E-mail:</span>
                                 <input type="text" id="ipt_email">
                             </div>
-                            <div class="campoSenha">
+                            <div class="campo">
                                 <span>Senha:</span>
                                 <input type="text" id="ipt_senha">
                             </div>
@@ -123,21 +125,40 @@
 
         <div id="modalCadastro" class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="closeCadastro">&times;</span>
                 <div class="modal-body">
-                    <img src="https://miro.medium.com/max/800/1*yo7GTx34uRd8OKuuEY4LJg.gif" alt="">
-                    <div class="modal-formLogin">
-                        <div class="tituloLogin">
+                    <div class="modal-formCadastro">
+                        <div class="titulo">
                             <h2>Faça o seu cadastro</h2>
                         </div>
-                        <div class="campos">
-                            <div class="campoEmail">
+                        <div class="camposCadastro">
+                            <div class="campo">
+                                <span>Nome:</span>
+                                <input type="text" id="ipt_nome">
+                            </div>
+                            <div class="campo">
+                                <span>Sobrenome:</span>
+                                <input type="text" id="ipt_sobrenome">
+                            </div>
+                            <div class="campo">
                                 <span>E-mail:</span>
                                 <input type="text" id="ipt_email">
                             </div>
-                            <div class="campoSenha">
+                            <div class="campo">
                                 <span>Senha:</span>
                                 <input type="text" id="ipt_senha">
+                            </div>
+                            <div class="campo">
+                                <span>Confirmar senha:</span>
+                                <input type="text" id="ipt_confSenha">
+                            </div>
+                            <div class="campo">
+                                <span>CEP:</span>
+                                <input type="text" id="ipt_CEP">
+                            </div>
+                            <div class="campo">
+                                <span>:</span>
+                                <input type="text" id="ipt_CEP">
                             </div>
                         </div>
                         <div class="forgPass">
@@ -148,6 +169,7 @@
                             <span onclick="">Criar uma conta</span>
                         </div>
                     </div>
+                    <img src="https://miro.medium.com/max/800/1*yo7GTx34uRd8OKuuEY4LJg.gif" alt="">
                 </div>
             </div>
         </div>
@@ -166,8 +188,8 @@
     var login = false
     var modalLogin = document.getElementById('modalLogin')
     var modalCadastro = document.getElementById('modalCadastro')
-    var closeBtn = document.getElementsByClassName('close')[0]
-    closeBtn.addEventListener('click', closeModalLogin)
+    var closeLoginBtn = document.getElementsByClassName('closeLogin')[0]
+    closeLoginBtn.addEventListener('click', closeModalLogin)
     window.addEventListener('click', outsideClick)
     
     function verificarLogin() {

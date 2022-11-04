@@ -1,63 +1,3 @@
-.modal {
-    display: none;
-    position: fixed;
-    font-family: 'Philosopher';
-    z-index: 1;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-    /* display: flex; */
-    /* flex-direction: row; */
-    position: fixed;
-    left: 23%;
-    bottom: -35%;
-    border: solid 2px orange;
-    border-radius: 10px;
-    background-color: #fff;
-    margin: 25% auto;
-    width: 54%;
-    height: 650px;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-    animation-name: modalOpen;
-    animation-duration: 1s;
-}
-
-.modal-body {
-    display: flex;
-    flex-direction: row;
-    /* padding: 10px 20px; */
-    justify-content: space-between;
-    height: 100%;
-}
-
-.modal-body img {
-    /* width: fit-content; */
-    height: 100%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-.tituloLogin h2 {
-    margin: 0;
-    font-size: 40px;
-}
-
-.tituloLogin {
-    /* border: solid 2px red; */
-    /* border-bottom: solid 2px gray; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5% 0;
-    height: 60px;
-}
-
 .modal-formLogin span {
     font-size: 24px;
     /* text-align: center; */
@@ -72,30 +12,14 @@
     font-size: 20px;
 }
 
-.campos {
-    /* border: solid 2px orange; */
+.camposLogin {
+    border: solid 2px orange;
     height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 80%;
     margin: 4% auto 0 auto;
-}
-
-.campoEmail {
-    /* border: solid 2px black; */
-    display: flex;
-    flex-direction: column;
-    height: 36%;
-    justify-content: space-between;
-}
-
-.campoSenha {
-    /* border: solid 2px black; */
-    display: flex;
-    flex-direction: column;
-    height: 36%;
-    justify-content: space-between;
 }
 
 .forgPass {
@@ -181,19 +105,14 @@
     margin: auto 0;
 }
 
-@keyframes modalOpen {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-.close {
+.closeLogin {
     padding-right: 10px;
     color: #ccc;
     float: right;
     font-size: 30px;
 }
 
-.close:hover,.close:focus {
+.closeLogin:hover,.closeLogin:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
