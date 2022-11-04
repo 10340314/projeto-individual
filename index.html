@@ -41,7 +41,7 @@
             </div>
             <div class="banner">
                 <h1>K-POP</h1>
-                <h4>Febre mundial</h4>
+                <!-- <h4>Febre mundial</h4> -->
             </div>
             <div class="degrade"></div>
         </div>
@@ -90,7 +90,7 @@
             </div>
             <button onclick="verificarLogin()">Recomende-me uma música!</button>
         </div>
-        <div id="simpleModal" class="modal">
+        <div id="modalLogin" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <div class="modal-body">
@@ -114,12 +114,44 @@
                         </div>
                         <button class="button">Entrar</button>
                         <div class="criarAcc">
-                            <span><a href="">Criar uma conta</a></span>
+                            <span onclick="openModalCadastro()">Criar uma conta</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div id="modalCadastro" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-body">
+                    <img src="https://miro.medium.com/max/800/1*yo7GTx34uRd8OKuuEY4LJg.gif" alt="">
+                    <div class="modal-formLogin">
+                        <div class="tituloLogin">
+                            <h2>Faça o seu cadastro</h2>
+                        </div>
+                        <div class="campos">
+                            <div class="campoEmail">
+                                <span>E-mail:</span>
+                                <input type="text" id="ipt_email">
+                            </div>
+                            <div class="campoSenha">
+                                <span>Senha:</span>
+                                <input type="text" id="ipt_senha">
+                            </div>
+                        </div>
+                        <div class="forgPass">
+                            <span><a href="">Esqueceu a senha?</a></span>
+                        </div>
+                        <button class="button">Entrar</button>
+                        <div class="criarAcc">
+                            <span onclick="">Criar uma conta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="section3">
         <div class="degrade2"></div>
@@ -132,32 +164,42 @@
 
 <script>
     var login = false
-
+    var modalLogin = document.getElementById('modalLogin')
+    var modalCadastro = document.getElementById('modalCadastro')
+    var closeBtn = document.getElementsByClassName('close')[0]
+    closeBtn.addEventListener('click', closeModalLogin)
+    window.addEventListener('click', outsideClick)
+    
     function verificarLogin() {
         if (login == false) {
-            openModal()
+            openModalLogin()
         }
     }
 
-    var modal = document.getElementById('simpleModal')
-
-    var closeBtn = document.getElementsByClassName('close')[0]
-
-    closeBtn.addEventListener('click', closeModal)
-
-    window.addEventListener('click', outsideClick)
-    
-    function openModal() {
-        modal.style.display = 'block';
+    function openModalLogin() {
+        modalLogin.style.display = 'block';
     }
 
-    function closeModal() {
-        modal.style.display = 'none'
+    function closeModalLogin() {
+        modalLogin.style.display = 'none'
     }
 
     function outsideClick(e) {
-        if (e.target == modal) {
-            modal.style.display = 'none'
+        if (e.target == modalLogin) {
+            modalLogin.style.display = 'none'
+        }
+        if (e.target == modalCadastro) {
+            modalCadastro.style.display = 'none'
         }
     }
+
+    function openModalCadastro() {
+        modalLogin.style.display = 'none'
+        modalCadastro.style.display = 'block'
+    }
+
+
+
+
+    // Gostaria de uma recomendação?
 </script>
